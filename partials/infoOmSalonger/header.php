@@ -20,7 +20,7 @@ foreach ($jsonArray as $jsonItem) {
     </div>
     <div class="top-right">
         <a href="">
-            <img src="../images/moreInfoPage/heart.png" alt="Back" class="headerLeftButtonImg"></img>
+            <img src="../images/moreInfoPage/heart.png" alt="Back" class="headerRightButtonImg"></img>
         </a>
     </div>
     <div class="bottom-left">

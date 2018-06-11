@@ -12,6 +12,8 @@ foreach ($jsonArray as $jsonItem) {
 
             echo "<div class='salongerListItemSecond'>";
                 echo "<p>" . $jsonItem->namn . "</p>";
+
+
                 if($jsonItem->stjärnor == 0){
                     echo "<img src='../images/stars/0.png' class='stjarnor'></img>";
                 }
