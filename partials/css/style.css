@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+    padding: 0;
+}
 /*  Header  */
 .header{
     display: flex;
@@ -7,11 +11,23 @@
     height: 50px;
     border-bottom: 1px solid orange;
 }
-.headerContent {
+.headerContentLeft {
+    width: 33.33%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.headerContentMiddle {
     width: 33.33%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.headerContentRight {
+    width: 33.33%;
+    display: flex;
+    align-items: center;
+    float: right;
 }
 .headerLeftButtonImg {
     width: 9.14px;
@@ -24,7 +40,7 @@
 
 /*  Terms   */
 .terms{
-    width: 95%;
+    width: 97%;
     height: 50px;
     border-bottom: 1px solid orange;
 
@@ -79,9 +95,61 @@
 }
 .stjarnor {
     width: 58px;
-    height: 8px;
+    height: 
 }
 a {
 text-decoration: none;
     color: black;
+}
+
+/*  infoOmSalonger  */
+.moreInfoHeaderImg {
+    width: 100%;
+}
+.moreInfoHeader {
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+.top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+.bottom-left {
+    color: white;
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+.infoOmSalongerTerms {
+    width: 97%;
+    height: 50px;
+    border-bottom: 1px solid orange;
+
+    display: flex;
+    justify-content: space-around;
+    padding-left: 1rem;
+}
+.headerStarContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.headerStjarnor{
+    width: 80px;
+    height: 11px;
+}
+.moreInfoMainContent {
+    margin: 1rem;
+}
+.moreInfoMainContentItems {
+    padding: 0.4rem 0 0.4rem 0;
+    border-bottom: 1px solid rgba(255, 165, 0, 0.2);
 }

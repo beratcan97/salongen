@@ -1,8 +1,7 @@
 <?php require_once "partials/head.php";?>
 
-<?php require_once "partials/salonger/header.php"; ?>
-<?php require_once "partials/salonger/terms.php"; ?>
-<?php require_once "partials/salonger/mainContent.php"; ?>
+
+<a href="salonger.php">Salonger</a>
 
 
 <?php require_once "partials/footer.php";?>

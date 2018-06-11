@@ -1,15 +1,15 @@
 <div class="header">
-    <div class="headerContent">
-        <a href="">
+    <div class="headerContentLeft">
+        <a href="../index.php">
             <img src="../images/buttons/back.png" alt="Back" class="headerLeftButtonImg"></img>
         </a>
     </div>
     
-    <div class="headerContent">
+    <div class="headerContentMiddle">
         <h1>Hår</h1>
     </div>
     
-    <div class="headerContent">
+    <div class="headerContentRight">
         <a href="">
             <img src="../images/buttons/terms.png" alt="Terms" class="headerRightButtonImg"></img>
         </a>
