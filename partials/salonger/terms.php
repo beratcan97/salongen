@@ -1,5 +1,7 @@
 <div class="terms">
-    <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+    <button onclick="myFunction()" class="dropbtn">
+        <?php echo "Pris" . $_GET["prisMin"] . " - " . $_GET["prisMax"] . "kr"?>
+    </button>
     <div id="myDropdown" class="dropdown-content">
         <a href="../salonger.php?prisMin=0&prisMax=100">Pris 0 - 100kr</a>
         <a href="../salonger.php?prisMin=100&prisMax=200">Pris 100 - 200kr</a>

@@ -54,12 +54,12 @@ body {
 }
 /*Dropdown*/
 .dropbtn {
-    background-color: #3498DB;
-    color: white;
+    background-color: white;
     padding: 16px;
     font-size: 16px;
     border: none;
     cursor: pointer;
+    width: 100%;
 }
 .dropdown-content {
     display: none;

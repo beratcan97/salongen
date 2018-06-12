@@ -9,7 +9,7 @@ foreach ($jsonArray as $jsonItem) {
     if((isset($_GET["prisMin"])) && ($_GET["prisMin"] <= $jsonItem->pris && $jsonItem->pris <= $_GET["prisMax"])){
         $value = true;
     }
-    else if(!isset($_GET["prisMin"])){
+    else if(!isset($_GET["prisMin"]) && !isset($_GET["prisMax"])){
         $value = true;
     }
     if($value){
