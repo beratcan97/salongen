@@ -24,7 +24,7 @@ foreach ($jsonArray as $jsonItem) {
                     <p><?php echo $jsonItem->namn ?></p>
                     <div class="listStarContainer">
                         <img src='../images/stars/<?php echo $jsonItem->stjärnor ?>.png' class='stjarnor'></img>
-                        <p>test</p>
+                        <p> (<?php echo $jsonItem->antalRöster ?>)</p>
                     </div>
                     <p><?php echo $jsonItem->adress ?></p>
                 </div>
