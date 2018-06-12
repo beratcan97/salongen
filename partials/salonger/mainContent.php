@@ -3,48 +3,40 @@ $jsonFile = file_get_contents('salonger.json');
 $jsonArray= json_decode($jsonFile); 
 
 echo "<ul class='salongerListItemUl'>";
+
 foreach ($jsonArray as $jsonItem) {
-    echo "<a href='../infoOmSalonger.php?ID={$jsonItem->ID}'>";
-        echo "<li class='salongerListItem'>";
-            echo "<div class='salongerListItemFirst'>";
-                echo "<p>" . $jsonItem->startar . "</p>";
-            echo "</div>";
+    $value = false;
+    if((isset($_GET["prisMin"])) && ($_GET["prisMin"] <= $jsonItem->pris && $jsonItem->pris <= $_GET["prisMax"])){
+        $value = true;
+    }
+    else if(!isset($_GET["prisMin"])){
+        $value = true;
+    }
+    if($value){
+        echo "<a href='../infoOmSalonger.php?ID={$jsonItem->ID}'>";
+        ?>
+            <li class='salongerListItem'>
+                <div class='salongerListItemFirst'>
+                    <p><?php echo $jsonItem->startar ?></p>
+                </div>
 
-            echo "<div class='salongerListItemSecond'>";
-                echo "<p>" . $jsonItem->namn . "</p>";
+                <div class='salongerListItemSecond'>
+                    <p><?php echo $jsonItem->namn ?></p>
+                    <img src='../images/stars/<?php echo $jsonItem->stjärnor ?>.png' class='stjarnor'></img>
+                    <p><?php echo $jsonItem->adress ?></p>
+                </div>
 
+                <div class='salongerListItemThird'>
+                    <p><?php echo $jsonItem->pris ?></p>
+                    <p><?php echo $jsonItem->tid ?></p>
+                </div>
 
-                if($jsonItem->stjärnor == 0){
-                    echo "<img src='../images/stars/0.png' class='stjarnor'></img>";
-                }
-                else if($jsonItem->stjärnor == 1){
-                    echo "<img src='../images/stars/1.png' class='stjarnor'></img>";
-                }
-                else if($jsonItem->stjärnor == 2){
-                    echo "<img src='../images/stars/2.png' class='stjarnor'></img>";
-                }
-                else if($jsonItem->stjärnor == 3){
-                    echo "<img src='../images/stars/3.png' class='stjarnor'></img>";
-                }
-                else if($jsonItem->stjärnor == 4){
-                    echo "<img src='../images/stars/4.png' class='stjarnor'></img>";
-                }
-                else if($jsonItem->stjärnor == 5){
-                    echo "<img src='../images/stars/5.png' class='stjarnor'></img>";
-                }
-                echo "<p>" . $jsonItem->adress . "</p>";
-            echo "</div>";
-
-            echo "<div class='salongerListItemThird'>";
-                echo "<p>" . $jsonItem->pris . "</p>";
-                echo "<p>" . $jsonItem->tid . "</p>";
-            echo "</div>";
-
-            echo "<div class='salongerListItemFourth'>";
-            echo "<img src='../images/buttons/right.png' class='rightButton'></img>";
-            echo "</div>";
-        echo "</li>";
-    echo "</a>";
-}
-echo "</ul>";
-?>
+                <div class='salongerListItemFourth'>
+                <img src='../images/buttons/right.png' class='rightButton'></img>
+                </div>
+            </li>
+        </a>
+    <?php
+    }
+} ?>
+</ul>
