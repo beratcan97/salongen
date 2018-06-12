@@ -60,6 +60,8 @@ body {
     border: none;
     cursor: pointer;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 .dropdown-content {
     display: none;
@@ -76,12 +78,18 @@ body {
     text-decoration: none;
     display: block;
 }
-.show {display: block;}
+.show {
+    display: block;
+}
+.dropdownButton {
+    width: 18.38px;
+    height: 9.14px;
+}
 
 /*  MainContent */
 .salongerListItem {
     width: 100%;
-    height: 5rem;
+    height: 7rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -162,6 +170,7 @@ text-decoration: none;
     display: flex;
     justify-content: space-around;
     padding-left: 1rem;
+    margin-top: 1rem;
 }
 .headerStarContainer{
     display: flex;
@@ -179,4 +188,26 @@ text-decoration: none;
 .moreInfoMainContentItems {
     padding: 0.4rem 0 0.4rem 0;
     border-bottom: 1px solid rgba(255, 165, 0, 0.2);
+}
+
+/*  Fonts   */
+@font-face {
+    font-family: "MillerBanner";
+    src: url(FontBureau.otf);
+    font-style: normal;
+    font-weight: 100;
+}
+h1 {
+    font-family: "MillerBanner";
+    font-weight: 100;
+    margin: 0;
+}
+p {
+    font-family: "MillerBanner";
+    font-weight: 100;
+    margin: 0;
+}
+.listStarContainer {
+    display: flex;
+    justify-content: 
 }

@@ -22,7 +22,10 @@ foreach ($jsonArray as $jsonItem) {
 
                 <div class='salongerListItemSecond'>
                     <p><?php echo $jsonItem->namn ?></p>
-                    <img src='../images/stars/<?php echo $jsonItem->stjärnor ?>.png' class='stjarnor'></img>
+                    <div class="listStarContainer">
+                        <img src='../images/stars/<?php echo $jsonItem->stjärnor ?>.png' class='stjarnor'></img>
+                        <p>test</p>
+                    </div>
                     <p><?php echo $jsonItem->adress ?></p>
                 </div>
 
